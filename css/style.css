@@ -1,0 +1,590 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.marginT {
+  margin-top: 5rem;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/coolJar.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.header__nav {
+  width: 100%;
+  height: 7.9rem;
+  border-bottom: 1px solid #ECB864;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 32rem) {
+  .header__nav {
+    height: 8.4rem;
+  }
+}
+@media only screen and (max-width: 32rem) {
+  .header__nav__logo {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.header__nav__logo img {
+  height: 19rem;
+}
+.header__nav__links {
+  margin-right: 3rem;
+  margin-top: 2.5rem;
+}
+@media only screen and (max-width: 37.5rem) {
+  .header__nav__links {
+    display: none;
+  }
+}
+.header__nav__links--link {
+  text-decoration: none;
+  color: #ECB864;
+  margin-right: 2rem;
+  font-size: 2rem;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.3rem;
+}
+@media only screen and (max-width: 32rem) {
+  .header__nav__links--link {
+    font-size: 1.5rem;
+  }
+}
+.header__nav__links--link--i {
+  margin-right: 1rem;
+}
+.header__nav__links--link:hover {
+  border-bottom-color: #ECB864;
+}
+.header__cont {
+  position: relative;
+  top: 15rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ECB864;
+  text-align: center;
+}
+@media only screen and (max-width: 32rem) {
+  .header__cont {
+    top: 5rem;
+  }
+}
+.header__cont--title {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+@media only screen and (max-width: 32rem) {
+  .header__cont--title {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+}
+.header__cont--sub-title {
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 3rem;
+}
+@media only screen and (max-width: 32rem) {
+  .header__cont--sub-title {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+}
+.header__cont--btn {
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #ECB864;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem 15rem;
+  margin-top: 2rem;
+  display: inline-block;
+  border: 1px solid #ECB864;
+  transition: all 0.5s;
+}
+@media only screen and (max-width: 32rem) {
+  .header__cont--btn {
+    padding: 1rem 5rem;
+  }
+}
+.header__cont--btn:hover {
+  background-color: #ECB864;
+  color: #000;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 32rem) {
+  .info {
+    display: block;
+    justify-content: right;
+  }
+}
+.info__panel-left {
+  width: 50%;
+}
+@media only screen and (max-width: 32rem) {
+  .info__panel-left {
+    width: 100%;
+  }
+}
+.info__panel-left--title {
+  font-size: 5rem;
+  color: #ECB864;
+  margin-top: 10rem;
+  margin-left: 5rem;
+  margin-bottom: 3rem;
+}
+@media only screen and (max-width: 76.8rem) {
+  .info__panel-left--title {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 32rem) {
+  .info__panel-left--title {
+    margin-top: 5rem;
+    margin-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 4rem;
+  }
+}
+.info__panel-left--info {
+  width: 60%;
+  font-size: 2rem;
+  color: black;
+  margin-left: 5.4rem;
+}
+@media only screen and (max-width: 32rem) {
+  .info__panel-left--info {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 3rem;
+  }
+}
+.info__panel-right {
+  width: 60%;
+}
+@media only screen and (max-width: 76.8rem) {
+  .info__panel-right {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 42.5rem) {
+  .info__panel-right {
+    width: 100%;
+  }
+}
+.info__panel-right__cont {
+  margin-top: 10rem;
+  display: flex;
+  margin-right: 10rem;
+  position: relative;
+}
+@media only screen and (max-width: 42.5rem) {
+  .info__panel-right__cont {
+    margin-right: 0;
+    display: inline-block;
+    position: relative;
+    transform: translateX(50%);
+  }
+}
+@media only screen and (max-width: 42.5rem) {
+  .info__panel-right__cont {
+    left: 25%;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  .info__panel-right__cont {
+    left: 15%;
+  }
+}
+@media only screen and (max-width: 32rem) {
+  .info__panel-right__cont {
+    left: 10%;
+  }
+}
+.info__panel-right__cont--img {
+  position: absolute;
+  height: 20rem;
+  width: 30rem;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 76.8rem) {
+  .info__panel-right__cont--img {
+    height: 15rem;
+    width: 20rem;
+  }
+}
+@media only screen and (max-width: 42.5rem) {
+  .info__panel-right__cont--img {
+    height: 10rem;
+    width: 15rem;
+  }
+}
+.info__panel-right__cont--img1 {
+  background-image: url(../img/aLotJar.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s;
+  outline-color: transparent;
+  outline-offset: 1.5rem;
+  box-shadow: 5px 5px 1.5rem rgba(0, 0, 0, 0.6);
+  top: 10rem;
+  left: 5rem;
+  z-index: 20;
+}
+@media only screen and (max-width: 42.5rem) {
+  .info__panel-right__cont--img1 {
+    top: 2rem;
+    left: 10rem;
+  }
+}
+.info__panel-right__cont--img1:hover {
+  z-index: 10;
+  transform: scale(1.1);
+  outline: 1rem solid #ECB864;
+  box-shadow: 5px 5px 1.5rem rgba(0, 0, 0, 0.9);
+}
+.info__panel-right__cont--img2 {
+  background-image: url(../img/multiJar.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 4;
+  box-shadow: 1px 1px solid rgba(94, 84, 84, 0.7);
+  transition: all 0.3s;
+  outline-color: transparent;
+  outline-offset: 1.5rem;
+  box-shadow: 5px 5px 1.5rem rgba(0, 0, 0, 0.6);
+  left: 15rem;
+  top: 3rem;
+}
+@media only screen and (max-width: 42.5rem) {
+  .info__panel-right__cont--img2 {
+    left: 5rem;
+    top: 8rem;
+  }
+}
+.info__panel-right__cont--img2:hover {
+  z-index: 10;
+  transform: scale(1.1);
+  outline: 1rem solid #ECB864;
+  box-shadow: 5px 5px 1.5rem rgba(0, 0, 0, 0.9);
+}
+.info__panel-right__cont--img3 {
+  background-image: url(../img/difMultiJar.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+  box-shadow: 1px 1px solid rgba(0, 0, 0, 0.7);
+  transition: all 0.3s;
+  outline-color: transparent;
+  outline-offset: 1.5rem;
+  box-shadow: 5px 5px 1.5rem rgba(0, 0, 0, 0.6);
+}
+.info__panel-right__cont--img3:hover {
+  z-index: 10;
+  transform: scale(1.1);
+  outline: 1rem solid #ECB864;
+  box-shadow: 5px 5px 1.5rem rgba(0, 0, 0, 0.9);
+}
+
+.contact {
+  background-image: linear-gradient(to right, #000, #ECB864);
+  height: 80vh;
+  width: 100%;
+  margin-top: 30rem;
+  position: relative;
+}
+@media only screen and (max-width: 76.8rem) {
+  .contact {
+    height: 65rem;
+  }
+}
+@media only screen and (max-width: 32rem) {
+  .contact {
+    height: 100vh;
+    margin-top: 30rem;
+  }
+}
+.contact__cont {
+  margin-left: 10rem;
+  margin-top: 5rem;
+  display: inline-block;
+}
+@media only screen and (max-width: 32rem) {
+  .contact__cont {
+    margin: 0;
+    text-align: center;
+    height: 80vh;
+  }
+}
+.contact__cont--title {
+  color: #fff;
+  font-size: 5rem;
+}
+.contact__cont--subTitle {
+  color: #fff;
+  font-size: 3rem;
+  margin-top: 5rem;
+}
+.contact__cont--subTitle__lists {
+  color: #fff;
+  list-style-type: none;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+.contact__cont--subTitle__lists--info a {
+  color: #ECB864;
+  transition: all 0.3s;
+  display: inline-block;
+}
+.contact__cont--subTitle__lists--info a:hover {
+  transform: scale(1.1);
+  padding: 1rem;
+  background-color: #ECB864;
+  color: #fff;
+  text-decoration: none;
+}
+@media only screen and (max-width: 32rem) {
+  .contact__cont--subTitle__lists--info a:hover {
+    padding: 0;
+  }
+}
+.contact__cont--info {
+  color: #fff;
+  margin-top: 3rem;
+  font-size: 2.5rem;
+}
+.contact__cont--info a {
+  color: #ECB864;
+  transition: all 0.3s;
+  display: inline-block;
+  padding: 1rem;
+}
+@media only screen and (max-width: 32rem) {
+  .contact__cont--info a {
+    padding: 0;
+  }
+}
+.contact__cont--info a:hover {
+  transform: scale(1.1);
+  background-color: #ECB864;
+  color: #fff;
+  text-decoration: none;
+}
+
+.product {
+  width: 100%;
+  height: 150vh;
+  position: relative;
+  top: 0rem;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bc.jpg);
+  background-size: cover;
+}
+@media only screen and (max-width: 32rem) {
+  .product {
+    top: 0;
+    height: 370vh;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  .product {
+    height: 420vh;
+  }
+}
+.product--title {
+  color: #ECB864;
+  font-size: 5rem;
+  position: relative;
+  top: 5rem;
+  text-align: center;
+  transition: all 0.4s;
+  margin-bottom: 3rem;
+  display: block;
+}
+@media only screen and (max-width: 32rem) {
+  .product--title {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+.product--title:hover {
+  transform: scale(1.1);
+}
+.product__card-list {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 32rem) {
+  .product__card-list {
+    display: block;
+    text-align: center;
+  }
+}
+.product__card-list__card {
+  height: 40rem;
+  width: 33rem;
+  background-color: #fff;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+  border: 3px solid #ECB864;
+  transition: all 0.3s;
+}
+@media only screen and (max-width: 32rem) {
+  .product__card-list__card {
+    width: 30rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.product__card-list__card--bc1 {
+  height: 20rem;
+  width: 100%;
+  background-image: url(../img/blue.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.product__card-list__card--bc2 {
+  height: 20rem;
+  width: 100%;
+  background-image: url(../img/difWalls.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.product__card-list__card--bc3 {
+  height: 20rem;
+  width: 100%;
+  background-image: url(../img/red.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.product__card-list__card--bc4 {
+  height: 20rem;
+  width: 100%;
+  background-image: url(../img/hammer.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.product__card-list__card--bc5 {
+  height: 20rem;
+  width: 100%;
+  background-image: url(../img/logoCan.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.product__card-list__card--bc6 {
+  height: 20rem;
+  width: 100%;
+  background-image: url(../img/difColors.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.product__card-list__card--title {
+  color: #ECB864;
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  margin-left: 1.5rem;
+  font-weight: 700;
+}
+.product__card-list__card--info {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: #ECB864;
+  font-weight: 600;
+  margin-left: 1.5rem;
+}
+.product__card-list__card:hover {
+  transform: scale(1.1);
+}
+@media only screen and (max-width: 32rem) {
+  .product__card-list__card:hover {
+    transform: none;
+  }
+}
+.product__card-list__card--btn {
+  border: none;
+  color: #fff;
+  background-color: #ECB864;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+  transition: all 0.4s;
+}
+.product__card-list__card--btn:hover {
+  color: #ECB864;
+  background-color: #000;
+}
+
+.footer {
+  width: 100%;
+  height: 70vh;
+  background-color: #000;
+  position: relative;
+}
+@media only screen and (max-width: 102.4rem) {
+  .footer {
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 76.8rem) {
+  .footer {
+    margin-top: 10rem;
+  }
+}
+@media only screen and (max-width: 32rem) {
+  .footer {
+    height: 60vh;
+    margin-top: 0;
+  }
+}
+.footer__logo {
+  text-align: center;
+}
+.footer__logo img {
+  height: 30rem;
+}
+.footer--copy {
+  color: #ECB864;
+  font-size: 2rem;
+  position: relative;
+  top: 35%;
+  font-weight: 800;
+}
+@media only screen and (max-width: 32rem) {
+  .footer--copy {
+    top: 10%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

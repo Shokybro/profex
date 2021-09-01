@@ -1,0 +1,621 @@
+.marginT {
+    margin-top: 5rem;
+}
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/coolJar.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    &__nav {
+        width: 100%;
+        height: 7.9rem;
+        border-bottom: 1px solid #ECB864;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond(smallPhone) {
+            height: 8.4rem;
+        }
+        
+
+        &__logo {
+            @include respond(smallPhone) {
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            & img {
+                height: 19rem;
+            }
+        }
+
+        &__links {
+            margin-right: 3rem;
+            margin-top: 2.5rem;
+
+            // background-color: orangered;
+            @include respond(medPhone) {
+                display: none;
+            }
+
+            &--link {
+                text-decoration: none;
+                color: #ECB864;
+                margin-right: 2rem;
+                font-size: 2rem;
+                transition: all .2s;
+                border-bottom: 2px solid transparent;
+                padding-bottom: .3rem;
+
+                @include respond(laptopL) {
+                    // font-size: 3rem;
+                }
+
+                @include respond(smallPhone) {
+                    font-size: 1.5rem;
+                }
+
+
+                &--i {
+                    margin-right: 1rem;
+                }
+
+                &:hover {
+                    border-bottom-color: #ECB864;
+                }
+            }
+        }
+    }
+    &__cont {
+        position: relative;
+        top: 15rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #ECB864;
+        text-align: center;
+
+        @include respond(smallPhone) {
+            top: 5rem;
+        }
+
+        &--title {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            text-align: center;
+
+            @include respond(laptopL) {
+                // font-size: 6rem;
+            }
+
+            @include respond(smallPhone) {
+                font-size: 3rem;
+                padding: 1rem;
+            }
+        }
+
+        &--sub-title {
+            font-size: 2.5rem;
+            text-align: center;
+            line-height: 3rem;
+
+            @include respond(laptopL) {
+                // font-size: 3rem;
+            }
+
+            @include respond(smallPhone) {
+                font-size: 1.5rem;
+                padding: 1rem;
+            }
+        }
+
+        &--btn {
+            text-decoration: none;
+            font-size: 2.5rem;
+            color: #ECB864;
+            background-color: rgba(0, 0, 0, .7);
+            padding: 1rem 15rem;
+            margin-top: 2rem;
+            display: inline-block;
+            border: 1px solid #ECB864;
+            transition: all .5s;
+
+            @include respond(laptopL) {
+                // padding: 2rem 20rem;
+            }
+            @include respond(smallPhone) {
+                padding: 1rem 5rem;
+            }
+
+            &:hover {
+                background-color: #ECB864;
+                color: #000;
+            }
+        }
+    }
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(smallPhone) {
+        display: block;
+        justify-content: right;
+    }
+
+    &__panel-left {
+        width: 50%;
+
+        @include respond(smallPhone) {
+            width: 100%;
+        }
+
+        &--title {
+            font-size: 5rem;
+            color: #ECB864;
+            margin-top: 10rem;
+            margin-left: 5rem;
+            margin-bottom: 3rem;
+
+            @include respond(tablet) {
+                font-size: 4rem;
+            }
+
+            @include respond(smallPhone) {
+                margin-top: 5rem;
+                margin-left: 0;
+                margin-bottom: 0;
+                text-align: center;
+                font-size: 4rem;
+            }
+        }
+
+        &--info {
+            width: 60%;
+            font-size: 2rem;
+            color: black;
+            margin-left: 5.4rem;
+
+            @include respond(smallPhone) {
+                width: 100%;
+                margin-left: 0;
+                text-align: center;
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    &__panel-right {
+        width: 60%;
+        // text-align: center;
+
+        @include respond(tablet) {
+            width: 50%;
+        }
+        
+        @include respond(bigPhone) {
+            width: 100%;
+        }
+
+        &__cont {
+            margin-top: 10rem;
+            display: flex;
+            margin-right: 10rem;
+            position: relative;
+
+            @include respond(tablet) {
+                // margin-right: 2rem;
+            }
+
+            @include respond(bigPhone) {
+                margin-right: 0;
+                display: inline-block;
+                position: relative;
+                transform: translateX(50%);
+            }
+
+            @include respond(bigPhone) {
+                left: 25%;
+            }
+
+            @include respond(medPhone) {
+                left: 15%;
+            }
+
+            @include respond(smallPhone) {
+                left: 10%;
+            }
+
+            &--img {
+                position: absolute;
+                height: 20rem;
+                width: 30rem;
+                border-radius: 5px;
+
+                @include respond(tablet) {
+                    height: 15rem;
+                    width: 20rem;
+                }
+
+                @include respond(bigPhone) {
+                    height: 10rem;
+                    width: 15rem;
+                }
+            }
+
+            &--img1 {
+                background-image: url(../img/aLotJar.jpg);
+                background-size: cover;
+                background-position: center;
+                transition: all .3s;
+                outline-color: transparent;
+                outline-offset: 1.5rem;
+                box-shadow: 5px 5px 1.5rem rgba(0, 0, 0, .6);
+                top: 10rem;
+                left: 5rem;
+                z-index: 20;
+
+                @include respond(bigPhone) {
+                    top: 2rem;
+                    left: 10rem;
+                }
+
+                &:hover {
+                    z-index: 10;
+                    transform: scale(1.1);
+                    outline: 1rem solid #ECB864;
+                    box-shadow: 5px 5px 1.5rem rgba(0, 0, 0, .9);
+                }
+            }
+            &--img2 {
+                background-image: url(../img/multiJar.jpg);
+                background-size: cover;
+                background-position: center;
+                // position: absolute;
+                z-index: 4;
+                box-shadow: 1px 1px solid rgba(94, 84, 84, 0.7);
+                transition: all .3s;
+                outline-color: transparent;
+                outline-offset: 1.5rem;
+                box-shadow: 5px 5px 1.5rem rgba(0, 0, 0, .6);
+                left: 15rem;
+                top: 3rem;
+
+                @include respond(bigPhone) {
+                    left: 5rem;
+                    top: 8rem;
+                }
+
+                &:hover {
+                    z-index: 10;
+                    transform: scale(1.1);
+                    outline: 1rem solid #ECB864;
+                    box-shadow: 5px 5px 1.5rem rgba(0, 0, 0, .9);
+                }
+            }
+
+            &--img3 {
+                background-image: url(../img/difMultiJar.jpg);
+                background-size: cover;
+                background-position: center;
+                z-index: 2;
+                box-shadow: 1px 1px solid rgba(0, 0, 0, .7);
+                transition: all .3s;
+                outline-color: transparent;
+                outline-offset: 1.5rem;
+                box-shadow: 5px 5px 1.5rem rgba(0, 0, 0, .6);
+
+                @include respond(bigPhone) {
+                   
+                }
+
+                &:hover {
+                    z-index: 10;
+                    transform: scale(1.1);
+                    outline: 1rem solid #ECB864;
+                    box-shadow: 5px 5px 1.5rem rgba(0, 0, 0, .9);
+                }
+            }
+        }
+    }
+}
+.contact {
+    background-image: linear-gradient(to right, #000, #ECB864);
+    height: 80vh;
+    width: 100%;
+    margin-top: 30rem;
+    position: relative;
+
+    @include respond(tablet) {
+        height: 65rem;
+    }
+
+    @include respond(smallPhone) {
+        height: 100vh;
+        margin-top: 30rem;
+    }
+
+    &__cont {
+        margin-left: 10rem;
+        margin-top: 5rem;
+        display: inline-block;
+
+        @include respond(smallPhone) {
+            margin: 0;
+            text-align: center;
+            height: 80vh;
+        }
+
+        &--title {
+            color: #fff;
+            font-size: 5rem;
+            // display: inline-block;
+        }
+
+        &--subTitle {
+            color: #fff;
+            font-size: 3rem;
+            margin-top: 5rem;
+
+            &__lists {
+                color: #fff;
+                list-style-type: none;
+                margin-top: 2rem;
+                font-size: 2.5rem;
+
+                &--info {
+
+                    & a {
+                        color: #ECB864;
+                        // text-decoration: none;
+                        transition: all .3s;
+                        display: inline-block;
+
+                        &:hover {
+                            transform: scale(1.1);
+                            padding: 1rem;
+                            background-color: #ECB864;
+                            color: #fff;
+                            text-decoration: none;
+
+                            @include respond(smallPhone) {
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &--info {
+            color: #fff;
+            margin-top: 3rem;
+            font-size: 2.5rem;
+
+            & a {
+                color: #ECB864;
+                // text-decoration: none;
+                transition: all .3s;
+                display: inline-block;
+                padding: 1rem;
+
+                @include respond(smallPhone) {
+                    padding: 0;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    // padding: 1rem;
+                    background-color: #ECB864;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.product {
+    width: 100%;
+    height: 150vh;
+    position: relative;
+    top: 0rem;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/bc.jpg);
+    background-size: cover;
+
+    @include respond(smallPhone) {
+        top: 0;
+        height: 370vh;
+        // background-image: none;
+    }
+    @include respond(medPhone) {
+        height: 420vh;
+    }
+
+    &--title {
+        color: #ECB864;
+        font-size: 5rem;
+        position: relative;
+        top: 5rem;
+        text-align: center;
+        transition: all .4s;
+        margin-bottom: 3rem;
+        display: block;
+
+        @include respond(smallPhone) {
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__card-list {
+        margin-top: 8rem;
+        display: flex;
+        justify-content: space-around;
+        // margin-top: 9rem;
+
+        @include respond(smallPhone) {
+            display: block;
+            text-align: center;
+        }
+
+        &__card {
+            height: 40rem;
+            width: 33rem;
+            background-color: #fff;
+            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .3);
+            border: 3px solid #ECB864;
+            transition: all .3s;
+
+            @include respond(smallPhone) {
+                width: 30rem;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &--bc1 {
+                height: 20rem;
+                width: 100%;
+                background-image: url(../img/blue.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+
+            &--bc2 {
+                height: 20rem;
+                width: 100%;
+                background-image: url(../img/difWalls.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+
+            &--bc3 {
+                height: 20rem;
+                width: 100%;
+                background-image: url(../img/red.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+
+            &--bc4 {
+                height: 20rem;
+                width: 100%;
+                background-image: url(../img/hammer.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+
+            &--bc5 {
+                height: 20rem;
+                width: 100%;
+                background-image: url(../img/logoCan.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+
+            &--bc6 {
+                height: 20rem;
+                width: 100%;
+                background-image: url(../img/difColors.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+
+            &--title {
+                color: #ECB864;
+                font-size: 2.5rem;
+                margin-top: 3rem;
+                margin-left: 1.5rem;
+                font-weight: 700;
+
+            }
+
+            &--info {
+                font-size: 1.5rem;
+                margin-top: 2rem;
+                color: #ECB864;
+                font-weight: 600;
+                margin-left: 1.5rem;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+
+                @include respond(smallPhone) {
+                    transform: none;
+                }
+            }
+            
+            &--btn {
+                border: none;
+                color: #fff;
+                background-color: #ECB864;
+                padding: 1rem 2rem;
+                border-radius: .5rem;
+                cursor: pointer;
+                margin-top: 2rem;
+                margin-left: 1.5rem;
+                transition: all .4s;
+
+                &:hover {
+                    color: #ECB864;
+                    background-color: #000;
+                }
+            }
+        }
+    }
+}
+.footer {
+    width: 100%;
+    height: 70vh;
+    background-color: #000;
+    position: relative;
+    // margin-top: 0;
+
+    @include respond(laptop) {
+        margin-top: 0;
+    }
+
+    @include respond(tablet) {
+        margin-top: 10rem;
+    }
+
+    @include respond(smallPhone) {
+        height: 60vh;
+        margin-top: 0;
+    }
+    @include respond(medPhone) {
+        // margin-top: 30rem;
+    }
+
+    &__logo {
+        text-align: center;
+
+        & img {
+            height: 30rem;
+        }
+    }
+
+    &--copy {
+        color: #ECB864;
+        font-size: 2rem;
+        position: relative;
+        top: 35%;
+        font-weight: 800;
+
+        @include respond(smallPhone) {
+            top: 10%;
+        }
+    }
+}
